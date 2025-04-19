@@ -1,0 +1,69 @@
+.wrapper {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 8;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(15.8px);
+  width: 30%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  width: 100%;
+  padding: 36px 20px 38px 20px;
+  max-width: 380px;
+}
+
+.title {
+  font-family: Roboto;
+  font-size: 22px;
+  font-weight: 500;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.checkboxes {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+
+.gold {
+  top: -15%;
+}
+
+.effect {
+  top: -15%;
+}
+
+/* Для планшетов (768px - 1024px) */
+@media (max-width: 1024px) {
+  .wrapper {
+    width: 28%;
+  }
+}
+
+/* Для мобильных устройств (до 768px) */
+@media (max-width: 768px) {
+  .wrapper {
+    position: static;
+    width: 100%;
+    border-top-right-radius: 36px;
+    border-top-left-radius: 36px;
+  }
+}
+
+/* Для маленьких мобильных (до 480px) */
+@media (max-width: 480px) {
+  .form {
+    padding: 20px;
+  }
+}

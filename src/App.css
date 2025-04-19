@@ -1,0 +1,16 @@
+
+:root {
+  /* Color palette */
+  --primary-color: #4285f4;
+  --secondary-color: #5AB828;
+  --blur: #000000B2;
+}
+
+#root {
+}
+
+body {
+  font-family: "Roboto Mono", monospace;
+  background-color: #AB4AFFC7;
+  overflow: hidden;
+}

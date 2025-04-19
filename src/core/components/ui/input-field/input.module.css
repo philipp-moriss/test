@@ -1,0 +1,23 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.label {
+    font-family: Roboto;
+    font-size: 13px;
+    color: #BBC6F2;
+}
+
+.input_wrapper {
+    border-radius: 6px;
+}
+
+.error {
+    border: 1px solid #F91717;
+}
+
+.focus {
+    border: 1px solid #5AB828;
+}

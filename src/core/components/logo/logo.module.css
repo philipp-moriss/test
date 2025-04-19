@@ -1,0 +1,60 @@
+.logo_container {
+  margin-top: 80.16px;
+  max-width: 331.45px;
+  max-height: 40.68px;
+  width: 30%;
+  transition: transform 0.1s ease;
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .logo_container {
+    margin-top: 35px;
+    margin-bottom: 30px;
+  }
+}
+
+.shakable:hover {
+  animation: shakeAnimation linear infinite;
+}
+
+.shakable[data-intensity="low"]:hover {
+  --shake-strength: 2px;
+}
+
+.shakable[data-intensity="medium"]:hover {
+  --shake-strength: 4px;
+}
+
+.shakable[data-intensity="high"]:hover {
+  --shake-strength: 6px;
+}
+
+.shakable[data-speed="slow"]:hover {
+  animation-duration: 3s;
+}
+
+.shakable[data-speed="normal"]:hover {
+  animation-duration: 1.5s;
+}
+
+.shakable[data-speed="fast"]:hover {
+  animation-duration: 0.7s;
+}
+
+@keyframes shakeAnimation {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(calc(-1 * var(--shake-strength)));
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(var(--shake-strength));
+  }
+}

@@ -1,0 +1,64 @@
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.checkboxContainer {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  gap: 8px;
+}
+
+.hiddenCheckbox {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+.customCheckbox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  min-height: 18px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background: transparent;
+  transition: all 0.2s ease;
+}
+
+.checkIcon {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.2s ease;
+}
+
+.hiddenCheckbox:checked+.customCheckbox {
+  background: #5AB828;
+  border-color: #5AB828;
+}
+
+.hiddenCheckbox:checked+.customCheckbox .checkIcon {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.hiddenCheckbox:focus+.customCheckbox {
+  box-shadow: 0 0 0 2px rgba(37, 248, 0, 0.3);
+}
+
+.label {
+  font-size: 11px;
+  color: #BBC6F2;
+}
+
+
+/* Hover state */
+.checkboxContainer:hover .customCheckbox {
+  border-color: #5AB828;
+}
