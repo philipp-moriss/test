@@ -10,11 +10,15 @@ export const Effects = () => {
   return (
     <React.Fragment>
       <Zeus disableShake={isTablet || isMobile} />
-      <Effect name="effect" animation={isTablet || isMobile ? "none" : "pulse"} speed="slow" />
+      <Effect
+        name="effect"
+        animation={isTablet || isMobile ? "none" : "pulse"}
+        speed="slow"
+      />
       <GlowEffect variant="top" />
-      <GlowEffect variant="bottom" />
       {!isMobile ? (
         <>
+          <GlowEffect variant="bottom" />
           <Effect name="gold" animation="rotate" />
           <Effect name="diamond" animation="pulse" />
         </>
